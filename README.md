@@ -76,14 +76,17 @@ chưa chạy được ở đó.
 ```
 ├── README.md
 ├── requirements.txt
-├── data/raw, data/processed     # dữ liệu gốc + đã chia
+├── data/raw, data/processed     # dữ liệu gốc + 4 file CSV đã chia + 2 file JSON thông tin chia
 ├── notebooks/                   # 01_eda, 02_baseline_and_cv, 03_tuning,
-│                                # 04_final_evaluation, 05_extra_experiments
+│                                # 04_final_evaluation, 05_extra_experiments,
+│                                # 06_time_design_tuning, 07_time_final_evaluation
 ├── src/                         # config, data, features (pipeline), evaluate
-├── scripts/                     # bản .py chạy được của từng giai đoạn
+├── scripts/                     # 01–11, bản phụ 07b/07c/07d/08b/08c/09b/09c,
+│                                # build/make/smoke_test
 ├── app/app.py                   # demo Streamlit
-├── models/                      # model.joblib, threshold.json
-├── reports/                     # CSV kết quả, JSON tóm tắt, figures/, báo cáo, slide
+├── models/                      # model.joblib, model_calibrated.joblib,
+│                                # model_metadata.json, threshold.json
+├── reports/                     # CSV kết quả, JSON tóm tắt, figures/ (50 hình)
 └── experiments/experiment_log.csv
 ```
 
