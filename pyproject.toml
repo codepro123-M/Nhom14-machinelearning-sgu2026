@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bank-marketing-term-deposit"
+version = "2.0.0"
+description = "Dự đoán khách hàng đăng ký tiền gửi có kỳ hạn (Bank Marketing, UCI) — đánh giá theo thời gian, xác suất đã calibrate."
+requires-python = ">=3.12"
+dependencies = [
+    "joblib==1.6.0",
+    "lightgbm==4.7.0",
+    "matplotlib==3.11.2",
+    "numpy==2.5.4",
+    "pandas==3.1.1",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "seaborn==0.13.2",
+    "shap==0.54.1",
+    "streamlit==1.67.0",
+    "xgboost==3.4.1",
+    "imbalanced-learn==0.14.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "nbconvert==7.17.2", "nbformat==5.11.1", "jupyter_client==8.10.0"]
+report = ["python-docx==1.1.0", "python-pptx==1.0.2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
