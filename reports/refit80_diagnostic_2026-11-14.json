@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "question": "Vi sao test theo thoi gian cua mo hinh cuoi v2 (Tree, train60) chi ROC-AUC 0.4562, trong khi cung tap test do o v1 (RF/LogReg, train80) dat 0.6972/0.7015?",
+  "finding": "Mo hinh cuoi v2 chi fit tren train60 (24.705 mau), chua bao gio thay cua so validation 60-80% (8.235 mau, yes 11.07%, noi mar/apr xuat hien lan dau). Refit cung tham so tren train+val (32.940 mau, 80%) khoi phuc lon tren CUNG tap test (8.236 mau, yes 30.83%). Test chua tung duoc dung de chon mo hinh/nguong trong phep kiem nay.",
+  "script": "/tmp/check_refit80.py (dung src.data.time_split_3way + src.features.build_pipeline, venv Nhom14_ML_work)",
+  "results_same_test": {
+    "Tree_train60_raw_reproduce": {"roc_auc": 0.469, "pr_auc": 0.2952, "note": "gan so bao cao 0.4562/0.2876; chenh 0.013 do bao cao dung ban da calibrate isotonic"},
+    "Tree_train80_same_params": {"roc_auc": 0.6571, "pr_auc": 0.4694},
+    "LogReg_balanced_train60": {"roc_auc": 0.5302, "pr_auc": 0.4023},
+    "LogReg_balanced_train80": {"roc_auc": 0.7015, "pr_auc": 0.5049, "note": "trung khop so v1 0.7015"},
+    "RF_tuned_v1_train80": {"roc_auc": 0.7079, "pr_auc": 0.5072, "note": "gan so v1 0.6972"}
+  },
+  "implication": "Headline 0.4562 phan lon la he qua cua thiet ke (khong refit tren train+val truoc khi danh gia test), khong phai chi do drift. Viet bao cao v2 voi headline 0.4562 se noi thap kha nang trien khai va do loi cho drift. Thiet ke dung: chon mo hinh/nguong tren validation, roi refit cung sieu tham so tren train+val, calibrate + chon nguong lai (vi du CV tren train80), roi danh gia test mot lan.",
+  "remaining_work_if_approved": "Chay lai scripts 08-09 tren train80 (calibrate + nguong + danh gia test), cap nhat experiment_log, roi moi viet lai bao cao/slide v2 voi headline ~0.66-0.71. Khong viet bao cao voi so 0.4562 truoc khi Minh chot.",
+  "not_changed": "Khong sua file du an nao khac; chi them file diagnostic nay. Mo hinh/calibrate/nguong hien tai trong models/ van la ban train60."
+}

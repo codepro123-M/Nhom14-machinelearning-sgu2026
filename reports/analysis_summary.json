@@ -1,0 +1,284 @@
+{
+  "final_model": "RF",
+  "threshold_f1": 0.6144769884922928,
+  "error_by_group": {
+    "job": {
+      "blue-collar": {
+        "n_yes": 122,
+        "recall": 0.27,
+        "n_fp": 28,
+        "n_fn": 89
+      },
+      "services": {
+        "n_yes": 64,
+        "recall": 0.359,
+        "n_fp": 31,
+        "n_fn": 41
+      },
+      "entrepreneur": {
+        "n_yes": 24,
+        "recall": 0.375,
+        "n_fp": 15,
+        "n_fn": 15
+      },
+      "technician": {
+        "n_yes": 148,
+        "recall": 0.561,
+        "n_fp": 93,
+        "n_fn": 65
+      },
+      "management": {
+        "n_yes": 64,
+        "recall": 0.578,
+        "n_fp": 47,
+        "n_fn": 27
+      },
+      "self-employed": {
+        "n_yes": 34,
+        "recall": 0.618,
+        "n_fp": 30,
+        "n_fn": 13
+      },
+      "admin.": {
+        "n_yes": 283,
+        "recall": 0.686,
+        "n_fp": 217,
+        "n_fn": 89
+      },
+      "unemployed": {
+        "n_yes": 40,
+        "recall": 0.75,
+        "n_fp": 23,
+        "n_fn": 10
+      },
+      "unknown": {
+        "n_yes": 4,
+        "recall": 0.75,
+        "n_fp": 5,
+        "n_fn": 1
+      },
+      "housemaid": {
+        "n_yes": 17,
+        "recall": 0.824,
+        "n_fp": 13,
+        "n_fn": 3
+      },
+      "student": {
+        "n_yes": 52,
+        "recall": 0.827,
+        "n_fp": 49,
+        "n_fn": 9
+      },
+      "retired": {
+        "n_yes": 76,
+        "recall": 0.868,
+        "n_fp": 81,
+        "n_fn": 10
+      }
+    },
+    "poutcome": {
+      "nonexistent": {
+        "n_yes": 629,
+        "recall": 0.474,
+        "n_fp": 403,
+        "n_fn": 331
+      },
+      "failure": {
+        "n_yes": 127,
+        "recall": 0.732,
+        "n_fp": 146,
+        "n_fn": 34
+      },
+      "success": {
+        "n_yes": 172,
+        "recall": 0.959,
+        "n_fp": 83,
+        "n_fn": 7
+      }
+    },
+    "month": {
+      "may": {
+        "n_yes": 182,
+        "recall": 0.148,
+        "n_fp": 34,
+        "n_fn": 155
+      },
+      "jul": {
+        "n_yes": 117,
+        "recall": 0.316,
+        "n_fp": 42,
+        "n_fn": 80
+      },
+      "aug": {
+        "n_yes": 122,
+        "recall": 0.598,
+        "n_fp": 104,
+        "n_fn": 49
+      },
+      "nov": {
+        "n_yes": 83,
+        "recall": 0.639,
+        "n_fp": 41,
+        "n_fn": 30
+      },
+      "jun": {
+        "n_yes": 118,
+        "recall": 0.712,
+        "n_fp": 93,
+        "n_fn": 34
+      },
+      "apr": {
+        "n_yes": 114,
+        "recall": 0.816,
+        "n_fp": 131,
+        "n_fn": 21
+      },
+      "sep": {
+        "n_yes": 53,
+        "recall": 0.943,
+        "n_fp": 48,
+        "n_fn": 3
+      },
+      "dec": {
+        "n_yes": 16,
+        "recall": 1.0,
+        "n_fp": 19,
+        "n_fn": 0
+      },
+      "mar": {
+        "n_yes": 61,
+        "recall": 1.0,
+        "n_fp": 52,
+        "n_fn": 0
+      },
+      "oct": {
+        "n_yes": 62,
+        "recall": 1.0,
+        "n_fp": 68,
+        "n_fn": 0
+      }
+    },
+    "contacted_before": {
+      "0": {
+        "n_yes": 741,
+        "recall": 0.507,
+        "n_fp": 537,
+        "n_fn": 365
+      },
+      "1": {
+        "n_yes": 187,
+        "recall": 0.963,
+        "n_fp": 95,
+        "n_fn": 7
+      }
+    },
+    "contact": {
+      "telephone": {
+        "n_yes": 164,
+        "recall": 0.317,
+        "n_fp": 66,
+        "n_fn": 112
+      },
+      "cellular": {
+        "n_yes": 764,
+        "recall": 0.66,
+        "n_fp": 566,
+        "n_fn": 260
+      }
+    },
+    "education": {
+      "basic.9y": {
+        "n_yes": 102,
+        "recall": 0.333,
+        "n_fp": 34,
+        "n_fn": 68
+      },
+      "basic.6y": {
+        "n_yes": 35,
+        "recall": 0.486,
+        "n_fp": 16,
+        "n_fn": 18
+      },
+      "high.school": {
+        "n_yes": 200,
+        "recall": 0.56,
+        "n_fp": 134,
+        "n_fn": 88
+      },
+      "professional.course": {
+        "n_yes": 124,
+        "recall": 0.597,
+        "n_fp": 73,
+        "n_fn": 50
+      },
+      "basic.4y": {
+        "n_yes": 74,
+        "recall": 0.635,
+        "n_fp": 57,
+        "n_fn": 27
+      },
+      "university.degree": {
+        "n_yes": 349,
+        "recall": 0.682,
+        "n_fp": 287,
+        "n_fn": 111
+      },
+      "unknown": {
+        "n_yes": 44,
+        "recall": 0.773,
+        "n_fp": 31,
+        "n_fn": 10
+      }
+    }
+  },
+  "logreg_odds_top10": {
+    "cat__month_mar": 3.674,
+    "num__cons.price.idx": 3.265,
+    "cat__month_aug": 1.615,
+    "num__nr.employed": 1.582,
+    "cat__month_dec": 1.575,
+    "num__euribor3m": 1.493,
+    "cat__education_illiterate": 1.404,
+    "cat__job_retired": 1.39,
+    "cat__contact_cellular": 1.364,
+    "num__contacted_before": 1.354
+  },
+  "logreg_odds_bottom10": {
+    "cat__education_basic.4y": 0.872,
+    "cat__marital_divorced": 0.837,
+    "cat__job_unemployed": 0.805,
+    "cat__month_apr": 0.781,
+    "cat__poutcome_failure": 0.741,
+    "cat__contact_telephone": 0.704,
+    "cat__month_nov": 0.562,
+    "cat__month_may": 0.528,
+    "cat__month_jun": 0.424,
+    "num__emp.var.rate": 0.095
+  },
+  "permutation_importance_top10": {
+    "nr.employed": 0.0843,
+    "euribor3m": 0.0622,
+    "pdays": 0.0441,
+    "emp.var.rate": 0.043,
+    "contact": 0.027,
+    "poutcome": 0.0132,
+    "month": 0.0118,
+    "cons.conf.idx": 0.0093,
+    "cons.price.idx": 0.0092,
+    "campaign": 0.009
+  },
+  "shap_top12": {
+    "num__nr.employed": 0.0677,
+    "num__euribor3m": 0.0558,
+    "num__emp.var.rate": 0.0521,
+    "cat__month_may": 0.0159,
+    "cat__contact_cellular": 0.0141,
+    "cat__contact_telephone": 0.0126,
+    "num__cons.conf.idx": 0.0107,
+    "num__contacted_before": 0.0099,
+    "num__cons.price.idx": 0.0089,
+    "num__pdays_clean": 0.0072,
+    "num__campaign": 0.0067,
+    "num__age": 0.0062
+  }
+}

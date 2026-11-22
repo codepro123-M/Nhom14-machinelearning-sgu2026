@@ -1,0 +1,54 @@
+{
+  "final_model": "Tree",
+  "selection_reason": "Tree co PR-AUC validation cao nhat (0.1239).",
+  "best_params": {
+    "clf__min_samples_split": 50,
+    "clf__min_samples_leaf": 100,
+    "clf__max_depth": 12,
+    "clf__criterion": "gini"
+  },
+  "calibration_method": "isotonic",
+  "threshold_cost_benefit": 0.0753,
+  "threshold_f1_val": 0.10570518389805966,
+  "threshold_recall70_val": 0.10570518389805966,
+  "test_metrics_cb_threshold": {
+    "roc_auc": 0.4562,
+    "pr_auc": 0.2876,
+    "accuracy": 0.3083,
+    "precision": 0.3083,
+    "recall": 1.0,
+    "f1": 0.4713,
+    "tn": 0,
+    "fp": 5697,
+    "fn": 0,
+    "tp": 2539
+  },
+  "test_metrics_f1_threshold": {
+    "roc_auc": 0.4562,
+    "pr_auc": 0.2876,
+    "accuracy": 0.3568,
+    "precision": 0.297,
+    "recall": 0.7948,
+    "f1": 0.4324,
+    "tn": 921,
+    "fp": 4776,
+    "fn": 521,
+    "tp": 2018
+  },
+  "bootstrap_ci_95": {
+    "roc_auc": [
+      0.4444,
+      0.4681
+    ],
+    "pr_auc": [
+      0.277,
+      0.2987
+    ],
+    "f1": [
+      0.4597,
+      0.4828
+    ]
+  },
+  "brier_test_raw": 0.2687,
+  "brier_test_calibrated": 0.253
+}

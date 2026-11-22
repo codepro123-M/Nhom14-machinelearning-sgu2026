@@ -1,0 +1,78 @@
+{
+  "duration_ab_time_cv": {
+    "A_khong_duration": {
+      "roc_auc_cv": 0.4976,
+      "pr_auc_cv": 0.0548
+    },
+    "B_co_duration": {
+      "roc_auc_cv": 0.9291,
+      "pr_auc_cv": 0.4747
+    }
+  },
+  "ablation_time_cv": {
+    "Personal": {
+      "roc_auc_cv": 0.5112,
+      "pr_auc_cv": 0.057,
+      "f1_cv": 0.0996,
+      "recall_cv": 0.4548
+    },
+    "Campaign": {
+      "roc_auc_cv": 0.4876,
+      "pr_auc_cv": 0.0536,
+      "f1_cv": 0.0591,
+      "recall_cv": 0.4626
+    },
+    "Macro": {
+      "roc_auc_cv": 0.4707,
+      "pr_auc_cv": 0.0522,
+      "f1_cv": 0.0589,
+      "recall_cv": 0.5667
+    },
+    "Personal+Campaign": {
+      "roc_auc_cv": 0.49,
+      "pr_auc_cv": 0.0545,
+      "f1_cv": 0.0791,
+      "recall_cv": 0.4255
+    },
+    "Campaign+Macro": {
+      "roc_auc_cv": 0.4746,
+      "pr_auc_cv": 0.0532,
+      "f1_cv": 0.0582,
+      "recall_cv": 0.5755
+    },
+    "Personal+Macro": {
+      "roc_auc_cv": 0.483,
+      "pr_auc_cv": 0.0528,
+      "f1_cv": 0.07,
+      "recall_cv": 0.5658
+    },
+    "All": {
+      "roc_auc_cv": 0.4816,
+      "pr_auc_cv": 0.053,
+      "f1_cv": 0.0801,
+      "recall_cv": 0.5536
+    }
+  },
+  "cost_benefit_optimum_test": {
+    "C=1.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 29847.1
+    },
+    "C=1.0,R=10.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 17141.5
+    },
+    "C=1.0,R=25.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 55210.5
+    },
+    "C=2.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 21631.9
+    },
+    "C=0.5,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 34047.0
+    }
+  }
+}

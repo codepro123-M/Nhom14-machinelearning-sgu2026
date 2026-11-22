@@ -1,0 +1,5 @@
+{
+  "best_model": "RF",
+  "pr_auc_cv": 0.4684,
+  "pr_auc_std": 0.0178
+}

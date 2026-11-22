@@ -1,0 +1,13 @@
+group,n,n_yes,recall,n_fp,n_fn
+admin.,2381,793,1.0,1588,0
+blue-collar,1295,216,1.0,1079,0
+entrepreneur,195,45,1.0,150,0
+housemaid,180,67,1.0,113,0
+management,524,169,1.0,355,0
+retired,729,321,1.0,408,0
+self-employed,265,68,1.0,197,0
+services,644,145,1.0,499,0
+student,528,215,1.0,313,0
+technician,1166,377,1.0,789,0
+unemployed,265,101,1.0,164,0
+unknown,64,22,1.0,42,0

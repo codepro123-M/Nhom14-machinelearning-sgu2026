@@ -1,0 +1,26 @@
+{
+  "final_model": "Tree",
+  "selection_reason": "Tree co PR-AUC validation cao nhat (0.1239).",
+  "best_params": {
+    "clf__min_samples_split": 50,
+    "clf__min_samples_leaf": 100,
+    "clf__max_depth": 12,
+    "clf__criterion": "gini"
+  },
+  "train_window": "train80 (train60+val)",
+  "n_train80": 32940,
+  "yes_rate_train80": 0.0638,
+  "brier_oof_train80": {
+    "isotonic": 0.1176,
+    "sigmoid": 0.1114
+  },
+  "method": "sigmoid",
+  "roc_auc_oof_train80": 0.4725,
+  "pr_auc_oof_train80": 0.0782,
+  "threshold_cost_benefit": 0.0225,
+  "threshold_f1_oof": 0.0228,
+  "threshold_recall70_oof": 0.0228,
+  "oof_top_pct_at_cb_threshold": 0.7243,
+  "oof_capture_pct_at_cb_threshold": 0.8562,
+  "oof_profit_at_cb_threshold": 3110.0
+}

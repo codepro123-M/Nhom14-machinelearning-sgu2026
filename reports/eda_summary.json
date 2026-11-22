@@ -1,0 +1,250 @@
+{
+  "raw_shape": [
+    41176,
+    21
+  ],
+  "clean_rows": 41176,
+  "duplicates_removed": 12,
+  "train_rows": 32940,
+  "test_rows": 8236,
+  "train_yes_rate": 0.1127,
+  "test_yes_rate": 0.1127,
+  "columns": [
+    "age",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "month",
+    "day_of_week",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous",
+    "poutcome",
+    "emp.var.rate",
+    "cons.price.idx",
+    "cons.conf.idx",
+    "euribor3m",
+    "nr.employed",
+    "y"
+  ],
+  "numeric_describe": {
+    "age": {
+      "mean": 40.017,
+      "median": 38.0,
+      "std": 10.453,
+      "min": 17.0,
+      "max": 98.0,
+      "p99": 71.0,
+      "skew": 0.797
+    },
+    "duration": {
+      "mean": 257.743,
+      "median": 179.0,
+      "std": 257.498,
+      "min": 0.0,
+      "max": 4199.0,
+      "p99": 1259.0,
+      "skew": 3.191
+    },
+    "campaign": {
+      "mean": 2.562,
+      "median": 2.0,
+      "std": 2.77,
+      "min": 1.0,
+      "max": 56.0,
+      "p99": 14.0,
+      "skew": 4.886
+    },
+    "pdays": {
+      "mean": 962.617,
+      "median": 999.0,
+      "std": 186.555,
+      "min": 0.0,
+      "max": 999.0,
+      "p99": 999.0,
+      "skew": -4.933
+    },
+    "previous": {
+      "mean": 0.174,
+      "median": 0.0,
+      "std": 0.499,
+      "min": 0.0,
+      "max": 7.0,
+      "p99": 2.0,
+      "skew": 3.89
+    },
+    "emp.var.rate": {
+      "mean": 0.08,
+      "median": 1.1,
+      "std": 1.572,
+      "min": -3.4,
+      "max": 1.4,
+      "p99": 1.4,
+      "skew": -0.721
+    },
+    "cons.price.idx": {
+      "mean": 93.576,
+      "median": 93.749,
+      "std": 0.579,
+      "min": 92.201,
+      "max": 94.767,
+      "p99": 94.465,
+      "skew": -0.231
+    },
+    "cons.conf.idx": {
+      "mean": -40.51,
+      "median": -41.8,
+      "std": 4.629,
+      "min": -50.8,
+      "max": -26.9,
+      "p99": -26.9,
+      "skew": 0.305
+    },
+    "euribor3m": {
+      "mean": 3.618,
+      "median": 4.857,
+      "std": 1.736,
+      "min": 0.634,
+      "max": 5.045,
+      "p99": 4.968,
+      "skew": -0.705
+    },
+    "nr.employed": {
+      "mean": 5166.906,
+      "median": 5191.0,
+      "std": 72.398,
+      "min": 4963.6,
+      "max": 5228.1,
+      "p99": 5228.1,
+      "skew": -1.042
+    }
+  },
+  "duration_by_y": {
+    "0": {
+      "median": 164.0,
+      "mean": 220.5
+    },
+    "1": {
+      "median": 449.0,
+      "mean": 550.7
+    }
+  },
+  "yes_rate_by_category": {
+    "job": {
+      "blue-collar": 0.0694,
+      "services": 0.0814,
+      "entrepreneur": 0.0863,
+      "self-employed": 0.1032,
+      "housemaid": 0.1036,
+      "technician": 0.1074,
+      "management": 0.1128,
+      "unknown": 0.1236,
+      "unemployed": 0.1281,
+      "admin.": 0.1292,
+      "retired": 0.2579,
+      "student": 0.3227
+    },
+    "marital": {
+      "divorced": 0.1005,
+      "married": 0.1023,
+      "single": 0.1394,
+      "unknown": 0.1618
+    },
+    "education": {
+      "basic.9y": 0.0768,
+      "basic.6y": 0.0842,
+      "basic.4y": 0.1058,
+      "high.school": 0.1093,
+      "professional.course": 0.1118,
+      "university.degree": 0.1358,
+      "unknown": 0.149,
+      "illiterate": 0.2222
+    },
+    "contact": {
+      "telephone": 0.0519,
+      "cellular": 0.1475
+    },
+    "month": {
+      "may": 0.0639,
+      "jul": 0.0923,
+      "nov": 0.102,
+      "jun": 0.1038,
+      "aug": 0.1076,
+      "apr": 0.2039,
+      "oct": 0.4355,
+      "sep": 0.4403,
+      "mar": 0.4977,
+      "dec": 0.5034
+    },
+    "day_of_week": {
+      "mon": 0.1038,
+      "fri": 0.1095,
+      "tue": 0.1132,
+      "wed": 0.1171,
+      "thu": 0.1196
+    },
+    "poutcome": {
+      "nonexistent": 0.0883,
+      "failure": 0.14,
+      "success": 0.66
+    }
+  },
+  "macro_correlations": {
+    "euribor3m-nr.employed": 0.945,
+    "euribor3m-emp.var.rate": 0.972,
+    "emp.var.rate-nr.employed": 0.906
+  },
+  "contacted_before_rate": {
+    "0": {
+      "n": 31733,
+      "yes_rate": 0.0924
+    },
+    "1": {
+      "n": 1207,
+      "yes_rate": 0.6462
+    }
+  },
+  "poutcome_yes_rate": {
+    "failure": 0.14,
+    "nonexistent": 0.0883,
+    "success": 0.66
+  },
+  "unknown_rate": {
+    "job": 0.0081,
+    "marital": 0.0021,
+    "education": 0.0422,
+    "default": 0.2082,
+    "housing": 0.0236,
+    "loan": 0.0236,
+    "contact": 0.0,
+    "month": 0.0,
+    "day_of_week": 0.0,
+    "poutcome": 0.0
+  },
+  "yes_rate_by_time_decile": {
+    "0": 0.1072,
+    "1": 0.1066,
+    "2": 0.1208,
+    "3": 0.1096,
+    "4": 0.1148,
+    "5": 0.1141,
+    "6": 0.1069,
+    "7": 0.1145,
+    "8": 0.1099,
+    "9": 0.1223
+  },
+  "campaign_percentiles": {
+    "50": 2.0,
+    "90": 5.0,
+    "95": 7.0,
+    "99": 14.0,
+    "99.5": 19.0
+  },
+  "campaign_gt15_rate": 0.0084,
+  "campaign_gt15_yes_rate": 0.0145
+}

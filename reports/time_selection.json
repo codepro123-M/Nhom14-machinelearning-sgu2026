@@ -1,0 +1,13 @@
+{
+  "best_model_val": "Tree",
+  "best_pr_auc_val": 0.1239,
+  "cv_std_best": 0.0104,
+  "final_model": "Tree",
+  "selection_reason": "Tree co PR-AUC validation cao nhat (0.1239).",
+  "best_params": {
+    "clf__min_samples_split": 50,
+    "clf__min_samples_leaf": 100,
+    "clf__max_depth": 12,
+    "clf__criterion": "gini"
+  }
+}

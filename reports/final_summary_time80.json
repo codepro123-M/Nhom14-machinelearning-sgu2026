@@ -1,0 +1,119 @@
+{
+  "final_model": "Tree",
+  "selection_reason": "Tree co PR-AUC validation cao nhat (0.1239).",
+  "best_params": {
+    "clf__min_samples_split": 50,
+    "clf__min_samples_leaf": 100,
+    "clf__max_depth": 12,
+    "clf__criterion": "gini"
+  },
+  "train_window": "train80 (train60+val, refit sau khi chọn trên validation)",
+  "n_train80": 32940,
+  "calibration_method": "sigmoid",
+  "threshold_cost_benefit": 0.0225,
+  "threshold_f1_oof": 0.02277387692460431,
+  "threshold_recall70_oof": 0.02277387692460431,
+  "threshold_source": "OOF train80 (cross_val_predict cv=3, calibrated)",
+  "test_metrics_cb_threshold": {
+    "roc_auc": 0.6121,
+    "pr_auc": 0.3967,
+    "accuracy": 0.3083,
+    "precision": 0.3083,
+    "recall": 1.0,
+    "f1": 0.4713,
+    "tn": 0,
+    "fp": 5697,
+    "fn": 0,
+    "tp": 2539
+  },
+  "test_metrics_f1_threshold": {
+    "roc_auc": 0.6121,
+    "pr_auc": 0.3967,
+    "accuracy": 0.3083,
+    "precision": 0.3083,
+    "recall": 1.0,
+    "f1": 0.4713,
+    "tn": 0,
+    "fp": 5697,
+    "fn": 0,
+    "tp": 2539
+  },
+  "bootstrap_ci_95": {
+    "roc_auc": [
+      0.5985,
+      0.6256
+    ],
+    "pr_auc": [
+      0.3798,
+      0.4155
+    ],
+    "f1": [
+      0.4597,
+      0.4828
+    ]
+  },
+  "brier_test_raw": 0.2549,
+  "brier_test_calibrated": 0.2556,
+  "note": "Test theo thời gian (20% cuối). Đính chính 19/11/2026: test đã được đánh giá nhiều lần trong dự án (xem mục 4.2.8 của báo cáo). mô hình chọn trên validation rồi refit trên train+val; calibrate + ngưỡng chọn trên OOF của train80.",
+  "cost_benefit_optimum_test": {
+    "C=1.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 29800.0
+    },
+    "C=1.0,R=10.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 17166.4
+    },
+    "C=1.0,R=25.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 55099.5
+    },
+    "C=2.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 21636.1
+    },
+    "C=0.5,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 33980.1
+    }
+  },
+  "top20_capture_test": 0.2745,
+  "drift_by_quarter": [
+    {
+      "quarter": "Q1",
+      "n": 2059,
+      "yes_rate": 0.0797,
+      "roc_auc": 0.4368,
+      "pr_auc": 0.07,
+      "recall": 1.0,
+      "precision": 0.0797
+    },
+    {
+      "quarter": "Q2",
+      "n": 2059,
+      "yes_rate": 0.2346,
+      "roc_auc": 0.6592,
+      "pr_auc": 0.3706,
+      "recall": 1.0,
+      "precision": 0.2346
+    },
+    {
+      "quarter": "Q3",
+      "n": 2059,
+      "yes_rate": 0.3978,
+      "roc_auc": 0.538,
+      "pr_auc": 0.4267,
+      "recall": 1.0,
+      "precision": 0.3978
+    },
+    {
+      "quarter": "Q4",
+      "n": 2059,
+      "yes_rate": 0.5211,
+      "roc_auc": 0.501,
+      "pr_auc": 0.5213,
+      "recall": 1.0,
+      "precision": 0.5211
+    }
+  ]
+}

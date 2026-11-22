@@ -1,0 +1,67 @@
+{
+  "best_model_cv": "Tree",
+  "best_pr_auc_cv": 0.0767,
+  "cv_std_best": 0.0334,
+  "final_model": "LogReg",
+  "selection_reason": "LogReg kém Tree 0.0075 < 1 độ lệch chuẩn CV (0.0334) nên chọn mô hình đơn giản hơn theo quy tắc 1-SE.",
+  "best_params": {
+    "clf__C": 0.001
+  },
+  "cv_table": {
+    "LogReg": {
+      "pr_auc_cv_mean": 0.0692,
+      "pr_auc_cv_std": 0.0218,
+      "pr_auc_fold0": 0.0514,
+      "pr_auc_fold1": 0.0563,
+      "pr_auc_fold2": 0.1,
+      "roc_auc_cv_mean": 0.4789,
+      "roc_auc_cv_std": 0.0153
+    },
+    "Tree": {
+      "pr_auc_cv_mean": 0.0767,
+      "pr_auc_cv_std": 0.0334,
+      "pr_auc_fold0": 0.0547,
+      "pr_auc_fold1": 0.0516,
+      "pr_auc_fold2": 0.1239,
+      "roc_auc_cv_mean": 0.4954,
+      "roc_auc_cv_std": 0.0432
+    },
+    "KNN": {
+      "pr_auc_cv_mean": 0.0751,
+      "pr_auc_cv_std": 0.025,
+      "pr_auc_fold0": 0.0629,
+      "pr_auc_fold1": 0.0524,
+      "pr_auc_fold2": 0.11,
+      "roc_auc_cv_mean": 0.4955,
+      "roc_auc_cv_std": 0.0341
+    },
+    "HGB": {
+      "pr_auc_cv_mean": 0.0684,
+      "pr_auc_cv_std": 0.0183,
+      "pr_auc_fold0": 0.0567,
+      "pr_auc_fold1": 0.0543,
+      "pr_auc_fold2": 0.0943,
+      "roc_auc_cv_mean": 0.4634,
+      "roc_auc_cv_std": 0.0317
+    },
+    "LightGBM": {
+      "pr_auc_cv_mean": 0.0693,
+      "pr_auc_cv_std": 0.0217,
+      "pr_auc_fold0": 0.0549,
+      "pr_auc_fold1": 0.0529,
+      "pr_auc_fold2": 0.0999,
+      "roc_auc_cv_mean": 0.4753,
+      "roc_auc_cv_std": 0.019
+    },
+    "RF": {
+      "pr_auc_cv_mean": 0.0689,
+      "pr_auc_cv_std": 0.0176,
+      "pr_auc_fold0": 0.0569,
+      "pr_auc_fold1": 0.0561,
+      "pr_auc_fold2": 0.0937,
+      "roc_auc_cv_mean": 0.4789,
+      "roc_auc_cv_std": 0.0263
+    }
+  },
+  "note": "Chọn lại bằng TimeSeriesSplit(3) CV trên train80 (32.940 dòng); test không dùng để chọn. Lựa chọn v2 ban đầu (Tree trên validation, fit train60) được thay thế vì cùng cửa sổ train60 đã gây lỗi thiết kế đầu tiên."
+}

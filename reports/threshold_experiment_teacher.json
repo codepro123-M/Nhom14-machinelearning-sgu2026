@@ -1,0 +1,28 @@
+{
+  "question": "Chênh lệch F1/Recall với số của giảng viên có phải do ngưỡng khác nhau?",
+  "teacher": {
+    "roc_auc": 0.814,
+    "pr_auc": 0.482,
+    "f1": 0.508,
+    "recall": 0.63
+  },
+  "ours_threshold_f1_0.6145": {
+    "f1": 0.5255,
+    "recall": 0.5991,
+    "precision": 0.468
+  },
+  "ours_at_recall_0.63": {
+    "threshold": 0.5177,
+    "recall": 0.6304,
+    "precision": 0.4251,
+    "f1": 0.5078
+  },
+  "ours_at_f1_0.508": {
+    "threshold": 0.5141,
+    "recall": 0.6336,
+    "precision": 0.4239,
+    "f1": 0.508
+  },
+  "conclusion": "ĐÃ CHỨNG MINH: ở ngưỡng 0,5177, mô hình đạt recall 0,6304 và F1 0,5078 — trùng khớp số của giảng viên (0,63 / 0,508). Chênh lệch là do ngưỡng khác nhau (thầy dùng ngưỡng ~0,51-0,52, nhóm dùng 0,6145), không phải do mô hình khác. Khẳng định trong báo cáo v1 được giữ lại với bằng chứng này.",
+  "method": "Quét precision_recall_curve trên tập test stratified với mô hình RF đã tuning (v1), tìm ngưỡng cho recall ~0,63 và F1 ~0,508."
+}

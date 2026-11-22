@@ -1,0 +1,158 @@
+{
+  "LogReg": {
+    "C": {
+      "value": 0.001,
+      "grid_min": 0.001,
+      "grid_max": 100,
+      "at_edge": true
+    }
+  },
+  "Tree": {
+    "min_samples_split": {
+      "value": 50,
+      "grid_min": 2,
+      "grid_max": 100,
+      "at_edge": false
+    },
+    "min_samples_leaf": {
+      "value": 100,
+      "grid_min": 1,
+      "grid_max": 200,
+      "at_edge": false
+    },
+    "max_depth": {
+      "value": 12,
+      "grid_min": 3,
+      "grid_max": null,
+      "at_edge": false
+    },
+    "criterion": {
+      "value": "gini",
+      "grid_min": "gini",
+      "grid_max": "entropy",
+      "at_edge": true
+    }
+  },
+  "KNN": {
+    "weights": {
+      "value": "distance",
+      "grid_min": "uniform",
+      "grid_max": "distance",
+      "at_edge": true
+    },
+    "p": {
+      "value": 1,
+      "grid_min": 1,
+      "grid_max": 2,
+      "at_edge": true
+    },
+    "n_neighbors": {
+      "value": 100,
+      "grid_min": 5,
+      "grid_max": 200,
+      "at_edge": false
+    }
+  },
+  "HGB": {
+    "min_samples_leaf": {
+      "value": 20,
+      "grid_min": 10,
+      "grid_max": 50,
+      "at_edge": false
+    },
+    "max_leaf_nodes": {
+      "value": 31,
+      "grid_min": 15,
+      "grid_max": 63,
+      "at_edge": false
+    },
+    "max_iter": {
+      "value": 100,
+      "grid_min": 100,
+      "grid_max": 300,
+      "at_edge": true
+    },
+    "max_depth": {
+      "value": 5,
+      "grid_min": null,
+      "grid_max": 8,
+      "at_edge": false
+    },
+    "learning_rate": {
+      "value": 0.05,
+      "grid_min": 0.03,
+      "grid_max": 0.2,
+      "at_edge": false
+    },
+    "l2_regularization": {
+      "value": 0.1,
+      "grid_min": 0.0,
+      "grid_max": 1.0,
+      "at_edge": false
+    }
+  },
+  "LightGBM": {
+    "reg_lambda": {
+      "value": 0.0,
+      "grid_min": 0.0,
+      "grid_max": 1.0,
+      "at_edge": true
+    },
+    "num_leaves": {
+      "value": 31,
+      "grid_min": 15,
+      "grid_max": 63,
+      "at_edge": false
+    },
+    "n_estimators": {
+      "value": 200,
+      "grid_min": 100,
+      "grid_max": 300,
+      "at_edge": false
+    },
+    "min_child_samples": {
+      "value": 20,
+      "grid_min": 10,
+      "grid_max": 50,
+      "at_edge": false
+    },
+    "max_depth": {
+      "value": -1,
+      "grid_min": -1,
+      "grid_max": 8,
+      "at_edge": true
+    },
+    "learning_rate": {
+      "value": 0.05,
+      "grid_min": 0.03,
+      "grid_max": 0.2,
+      "at_edge": false
+    }
+  },
+  "RF": {
+    "n_estimators": {
+      "value": 600,
+      "grid_min": 100,
+      "grid_max": 600,
+      "at_edge": true
+    },
+    "min_samples_leaf": {
+      "value": 10,
+      "grid_min": 1,
+      "grid_max": 20,
+      "at_edge": false
+    },
+    "max_features": {
+      "value": 0.3,
+      "grid_min": 0.2,
+      "grid_max": "sqrt",
+      "at_edge": false
+    },
+    "max_depth": {
+      "value": 4,
+      "grid_min": 4,
+      "grid_max": null,
+      "at_edge": true
+    }
+  }
+}
