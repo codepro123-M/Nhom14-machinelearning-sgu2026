@@ -1,0 +1,46 @@
+{
+    "total_original_samples": 41188,
+    "duplicates_removed": 12,
+    "clean_samples": 41176,
+    "features_count": 20,
+    "target_column": "y",
+    "stratified_split": {
+        "train_samples": 32940,
+        "test_samples": 8236,
+        "train_yes_ratio": 11.27,
+        "test_yes_ratio": 11.27,
+        "random_state": 42
+    },
+    "time_based_split": {
+        "train_samples": 32940,
+        "test_samples": 8236,
+        "train_yes_ratio": 6.38,
+        "test_yes_ratio": 30.83
+    },
+    "unknown_distribution": {
+        "job": {
+            "count": 330,
+            "percent": 0.8
+        },
+        "marital": {
+            "count": 80,
+            "percent": 0.19
+        },
+        "education": {
+            "count": 1730,
+            "percent": 4.2
+        },
+        "default": {
+            "count": 8596,
+            "percent": 20.88
+        },
+        "housing": {
+            "count": 990,
+            "percent": 2.4
+        },
+        "loan": {
+            "count": 990,
+            "percent": 2.4
+        }
+    }
+}
