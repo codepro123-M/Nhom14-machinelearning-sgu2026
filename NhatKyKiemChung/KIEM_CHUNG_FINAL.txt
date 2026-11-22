@@ -1,0 +1,45 @@
+NHẬT KÝ KIỂM CHỨNG BẢN FINAL — Báo cáo Lần 2, Nhóm 14, Bank Marketing
+Ngày: 15/11/2026. Người chốt mô hình: Trần Quang Minh (18:43, 15/11/2026).
+
+1. MÔ HÌNH CUỐI ĐÃ CHỐT
+   Decision Tree refit trên train80 (train60+val, 32.940 mẫu) + calibrate sigmoid.
+   Siêu tham số: max_depth 12, min_samples_leaf 100, min_samples_split 50,
+   criterion gini, class_weight="balanced".
+   Nguồn: models/model_metadata.json, threshold.json,
+   experiments/experiment_log.csv (dòng RESTORE_TREE_ACTIVE, 15/11/2026 00:05).
+
+2. HEADLINE (test theo thời gian, 8.236 mẫu, yes-rate 30,83%)
+   ROC-AUC 0,6121 | PR-AUC 0,3967 | CI95 ROC-AUC [0,5985; 0,6256]
+   (CI95 PR-AUC [0,3798; 0,4155]; F1 0,4713 ở ngưỡng CB 0,0225 — SUY BIẾN:
+   recall 1,0, TN=0; ngưỡng F1 OOF 0,0228; top 20% bắt 27,5% yes).
+   Phương án LogReg chọn lại (test 0,5480) CHỈ xuất hiện như kết quả âm
+   (Bảng 5.2), không dùng làm headline.
+
+3. PLACEHOLDER ĐÃ ĐIỀN (28 vị trí trong docx)
+   {{HEADLINE_ROC_AUC}} x8 -> 0,6121
+   {{HEADLINE_PR_AUC}} x8 -> 0,3967
+   {{HEADLINE_CI}} x6 -> [0,5985; 0,6256]
+   {{FINAL_MODEL_NAME}} x6 -> Decision Tree refit80 + calibrate sigmoid
+   Slide: các vị trí tương ứng đã điền cùng các số trên (0,6121 xuất hiện 6 lần).
+
+4. SỬA THÊM 2 ĐIỂM SÓT TRONG BẢN THẢO (phát hiện khi kiểm tra bản FINAL)
+   (a) Marker live "[CHƯA KIỂM CHỨNG LẠI — ...]" ở mục 5.3.3 về recall
+       tháng 5 14,8%: đã kiểm chứng — file reports/error_by_month.csv do
+       scripts/05_analysis.py (giai đoạn 8, chạy 12/11/2026) tạo từ mô hình
+       cuối v1 (RF đã tuning) trên test stratified 80/20 với ngưỡng F1
+       0,6145 (dòng 34-41, 65; reports/test_results.csv dòng RF).
+       Các số 0,6648 (thô) / 0,6413 (isotonic) cũng đã kiểm chứng lại bằng
+       chạy lại code ngày 15/11/2026 (work/verify_v2/reverify_v2.log).
+   (b) "(placeholder mục 5.3.1)" -> "(xem mục 5.3.1)".
+
+5. KIỂM TRA CUỐI BẢN FINAL
+   - docx: 68 trang A4 (LibreOffice -> pdfinfo), 587 đoạn, 20 bảng, 4 hình C4.
+   - pptx: 15 slide 16:9.
+   - Không còn placeholder {{...}} trong docx/pptx; không còn marker live
+     [CẦN KIỂM CHỨNG]/[CHƯA KIỂM CHỨNG LẠI —] (chỉ còn câu nhắc lịch sử
+     "các mục từng ghi [...] đã được xác minh"); không còn chữ BẢN THẢO /
+     CHƯA CHỐT / "chưa chốt" trong bản final.
+   - Bìa: chỉ có Trần Quang Minh — MSSV 3124411168; 2 thành viên + GV hướng
+     dẫn vẫn để trống (chưa có xác nhận — không tự điền). Mục lục là TOC field.
+   - Bản DRAFT (67 trang) giữ nguyên trong thư mục làm việc để đối chiếu.
+   - models/ trong dự án đã đúng bản Tree (không sửa gì trong thư mục dự án).

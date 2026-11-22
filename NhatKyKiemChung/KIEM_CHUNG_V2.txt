@@ -1,0 +1,33 @@
+NHAT KY KIEM CHUNG DOT SUA LAN 2 (15/11/2026) - Bao cao Lan 2 mon May hoc, Nhom 14
+Mo hinh cuoi KHONG DOI: Decision Tree refit80 + calibrate sigmoid, ROC-AUC 0,6121 / PR-AUC 0,3967.
+
+1. KIEM THU MUC HE THONG THAT (muc 5.2.2) - chay that tren app Streamlit (streamlit run app/app.py, cong 8501)
+   Bang trinh duyet tu dong Playwright/Chromium, du lieu lay 5 dong dau cua data/processed/time_test.csv.
+   - (a) CSV thieu cot job: "Thieu cot bat buoc: job. File can du 20 cot nhu du lieu goc..." - dung, khong du doan. DAT
+   - (b) CSV age="abc" 1/5 dong: "Cot age: 1 dong khong phai so (da loai khoi danh sach)." - con 4 dong. DAT
+   - (c) CSV campaign=20 va 99: "2 dong co campaign > 15 se bi cat tran o 15 nhu luc huan luyen." + form campaign=20 cung canh bao. DAT
+   - (d) CSV job="phi hanh gia": "Cot job: gia tri chua tung thay khi huan luyen (phi hanh gia) - mo hinh van chay, coi nhu category la." DAT
+   - (e) Form 1 khach (mac dinh): xac suat 7,5%, "Nen goi"; SHAP top 5: cons.price.idx -0,335, cons.conf.idx -0,200,
+     day_of_week_mon +0,032, euribor3m +0,025, age -0,016. CSV 1 khach: tra 1 dong, rank 1, "Goi". DAT
+   - (f) CSV hop le 5 khach + tai ranked_customers.csv: proba 0,1108 -> 0,0735 giam dan, rank 1-5, file du 5 dong, 23 cot. DAT
+     (Ca 5 dong deu "Goi" vi xac suat deu tren nguong 0,022 - he qua cua nguong suy bien, xem muc 5.3.6.)
+   Anh chup man hinh: HinhAnh_KiemThu/shot_*.png; file CSV kiem thu: case_*.csv; ket qua tai ve: ranked_customers.csv.
+2. LOI PHAT HIEN KHI CHAY THAT VA DA SUA TRONG APP/APP.PY (15/11/2026)
+   - App chay bang lenh trong README bi loi ModuleNotFoundError: No module named 'src' (model pickle tham chieu src.features,
+     Streamlit khong dua thu muc goc du an vao sys.path) - da sua: them thu muc goc vao sys.path ngay dau app.py.
+     Luu y: cac lan kiem tra "HTTP 200" truoc day chi chung minh trang loi cung tra HTTP 200.
+   - Nhan nguong ghi "chon tren validation / isotonic-Platt" trong khi metadata la OOF train80 / sigmoid - da sua: app doc dung
+     calibration_method va threshold_source tu metadata/threshold.json.
+   - Thong bao loi thieu mo hinh ghi sai ten script (09_final_time_evaluation.py) - da sua thanh 08b_refit80.py.
+3. DOCKER: docker build / docker run KHONG chay duoc trong moi truong kiem chung (sandbox Linux):
+   "Cannot connect to the Docker daemon at unix:///var/run/docker.sock" + dockerd: 'failed to register "bridge" driver:
+   operation not permitted' (khong tao duoc network namespace). Ghi dung trong bao cao (muc 4.2.2, 5.2.3, 6.3);
+   cach chay lai tren may Windows + ket qua mong doi co trong muc 4.2.2 va README.md.
+4. KIEM THU TU DONG: pytest -q: 7 passed in 6,47s (15/11/2026).
+5. BAO CAO: 74 trang A4 (LibreOffice -> pdfinfo), 685 doan, 20 bang, 11 hinh (4 C4 + 7 hinh moi chuong 5).
+   Khong con placeholder {{...}}, khong con "~/workspace", "can chot", "ban giao", "checklist" trong bao cao.
+   Muc luc: 78 muc (cap 1-3) dien so trang that, da doi chieu tung muc voi trang heading trong PDF - khop 78/78.
+   Chuong 1-3 da sua: "Giai doan: Giua ky" -> Lan 2; ket qua tot nhat 0,7898 -> Tree 0,6121; tham chieu Muc 4.9/5.2/6/7/8
+   da sua thanh muc con ton tai; muc 3.4 viet lai (test mo nhieu lan, co ghi log).
+6. README.md: da cap nhat mo hinh cuoi Tree refit80 + headline 0,6121/0,3967; them muc Docker + chuoi v2.
+7. BIA: van de trong ten 2 thanh vien Nhom 14 + ten GV huong dan (chua co thong tin, khong bia).

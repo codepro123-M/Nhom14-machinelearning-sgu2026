@@ -1,0 +1,10 @@
+{
+  "threshold_cost_benefit": 0.022476365134089255,
+  "threshold_f1": 0.02277387692460431,
+  "threshold_recall70": 0.02277387692460431,
+  "calibration_method": "sigmoid",
+  "cost_benefit_C": 1.0,
+  "cost_benefit_R": 15.0,
+  "train_window": "train80 (train60+val, 32940 rows)",
+  "threshold_source": "OOF train80 (cross_val_predict cv=3, calibrated)"
+}

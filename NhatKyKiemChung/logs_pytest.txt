@@ -1,0 +1,8 @@
+.......                                                                  [100%]
+7 passed in 3.84s
+EXIT_PYTEST:0
+
+--- Chạy lại ngày 15/11/2026 (sau khi thêm tests/test_calibration_threshold.py: 2 test calibrate/ngưỡng) ---
+.........                                                                [100%]
+9 passed in 4.42s
+EXIT_PYTEST:0

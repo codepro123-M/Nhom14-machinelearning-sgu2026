@@ -1,0 +1,49 @@
+NHAT KY KIEM CHUNG DOT 3 — BAO CAO LAN 2 NHOM 14, BANK MARKETING (15/11/2026)
+Mo hinh va headline KHONG doi: Decision Tree refit80 + calibrate sigmoid,
+ROC-AUC 0,6121 / PR-AUC 0,3967 (CI95 [0,5985; 0,6256]).
+Dot sua nay theo 6 diem Minh gui toi 15/11/2026 (tru 2 viec KHONG lam: bia van
+de trong ten 2 thanh vien + GV vi chua co thong tin; Docker KHONG ghi la da chay
+thanh cong — xem muc 4.2.2 trong bao cao).
+
+1. Chuong 1: doan "Bao cao nay trinh bay... den giua ky... ke hoach hoan thien
+   cho giai doan cuoi ky" da viet lai thanh Lần 2 (thang 11/2026), khop Bang 1.1.
+2. Muc 3.4: "o cuoi ky, nhom se bao cao them..." -> thi da hoan thanh (bao cao
+   Lần 2 nay, Chuong 5 muc 5.3); dan "xem Hinh 4.6" (sai — Chuong 4 chi co
+   Hinh 4.1–4.4) -> "xem Hinh 5.7" (yes-rate theo thang, fig07). So thang
+   mar/sep/oct/dec 43–50% da kiem chung lai tu du lieu day du: mar 50,5%,
+   sep 44,9%, oct 43,9%, dec 48,9% (train.csv + test.csv, 41.176 dong).
+   Khong con dan Hinh 4.5/4.6/4.7 trong bao cao.
+3. Go cau noi bo: "Minh da chot Tree ngay 15/11/2026" (5.1.2) va "Mo hinh cuoi
+   DA duoc chot ngay 15/11/2026" (mo dau Chuong 5 va Chuong 6) -> van phong
+   bao cao ("Mo hinh cuoi duoc chon la..."). "Dinh chinh lan 2" (3 lan, muc
+   5.3.4) nay co dinh nghia o dau muc: lan 1 (sang 14/11) chi ra headline
+   0,4562 phan lon do thiet ke; lan 2 (trua 14/11) sua so refit 0,6571 (sai
+   vi script bo sot class_weight="balanced"). Tat ca nhan "[CHUA KIEM CHUNG
+   LAI]" / "[Da kiem chung lai ngay ...]" da gom ve MỘT chu thich phuong phap
+   kiem chung o dau Chuong 5; kiem tra cuoi: 0 chuoi "[CHUA KIEM CHUNG" hay
+   "[Da kiem chung lai" trong docx (ke ca Chuong 6 — da tim them 1 cho sot).
+4. Them 2 hinh kiem thu vao muc 5.2.2: Hinh 5.4 (SHAP 1 khach, shot_e1b_shap.png
+   — da xem anh: xac suat 7,5%, SHAP top 5 khop bang) va Hinh 5.5 (CSV 1 khach,
+   shot_e2_single_csv.png). Danh lai hinh cu 5.4–5.7 -> 5.6–5.9 cho dung thu tu.
+   Tong 13 hinh trong docx (4 hinh C4 + 9 hinh Chuong 5).
+5. Them 2 test tu dong cho calibrate/nguong: tests/test_calibration_threshold.py
+   (file kem trong thu muc nay) — test khop nguong threshold.json vs metadata
+   va test phat hien nguong suy bien (nguong CB 0,0225 < min_proba_test 0,0624
+   tinh lai tu model_calibrated.joblib tren time_test.csv, min = 0,062421).
+   pytest: 9 passed in 4,87s (7 cu + 2 moi). Muc 6.2.5 va 6.1.3 da cap nhat.
+6. TLTK: 3 -> 8 muc. Them [4] Niculescu-Mizil & Caruana (2005), [5] Guo et al.
+   (2017), [6] Gama et al. (2014) — da kiem chung thong tin thu muc bang tim
+   kiem web (ACM Comput. Surv. 46(4) Art. 44, DOI 10.1145/2523813),
+   [7] Hyndman & Athanasopoulos (2021) FPP3, [8] Bergmeir & Benitez (2012)
+   — da kiem chung (Inf. Sci. 191, 192–213, DOI 10.1016/j.ins.2011.12.028).
+   Trich dan trong van ban: calibrate [4][5] o muc 5.3.6, drift [6] o 5.3.3,
+   time-series CV [7][8] o 3.4 va 5.3.7.
+
+KIEM CHUNG CUOI (15/11/2026, chay lai sau khi rebuild):
+- Bao cao: 77 trang A4 (LibreOffice -> pdfinfo), 696 doan, 20 bang, 13 hinh.
+- Slide: 15 trang, da cap nhat "9 test / 9 passed in 4,87s".
+- Khong con "{{...}}", "~/workspace", "can chot", "ban giao", "checklist",
+  "[CHUA KIEM CHUNG", "[Da kiem chung lai", "Hinh 4.6", "Giua ky" trong docx.
+- Muc luc: 78 muc, kiem chung trang Chuong 4 -> tr. 9, Chuong 5 -> tr. 33,
+  Chuong 6 -> tr. 62, TLTK -> tr. 69 (dung voi PDF).
+- pytest 9/9 pass (4,87s). Metadata trong zip dung ban Tree (0,6121/0,3967).

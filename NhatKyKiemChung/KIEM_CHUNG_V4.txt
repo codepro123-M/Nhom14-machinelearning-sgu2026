@@ -1,0 +1,15 @@
+KIEM CHUNG DOT SUA V4 — 15/11/2026 (sua mau thuan so test tu dong + cau LogReg 0,7898 o Chuong 1)
+- pytest chay lai: 9 passed in 4,42s (7 cu + 2 moi trong tests/test_calibration_threshold.py).
+  Log day du: NhatKyKiemChung/logs_pytest.txt (gi ca lan chay cu 7 passed in 3,84s).
+- Da sua trong bao cao: §5.2.1 them 2 dong test moi (tong 9 test); §5.2.3 xoa dong
+  "Chua co kiem thu tu dong cho logic chon nguong va calibrate"; §6.3 xoa muc han che
+  so 4 (da co test) va danh so lai, ghi them vao muc "Da hoan thanh"; §6.1.2 "pytest 9 test";
+  §4.5.5 them 2 muc 8-9, tom tat chuong 9 test, danh sach nguon them file test moi.
+- Chuong 1, Bang 1.1: cau LogReg 0,7898 sua tu "chi con la tham chieu cua vong stratified"
+  thanh "chi de tham chieu, khong phai ket qua cua Lan 2".
+- Muc luc: build tao lai TOC field rong -> da dien thu cong 78 muc bang so trang do that
+  tu PDF (PyMuPDF), lap 2 vong toi on dinh, kiem chung khop 78/78 (script: work/assembly/fill_toc.py).
+- Kiem chung cuoi: bao cao 77 trang A4 (LibreOffice -> pdfinfo), 20 bang, 13 hinh; slide 15 trang;
+  khong con "{{...}}", "7/7", "pytest 7 test", "Chua co kiem thu tu dong cho calibrate/logic chon nguong".
+- Khong doi mo hinh/headline (Tree refit80, ROC-AUC 0,6121 / PR-AUC 0,3967). Bia van de trong
+  ten 2 thanh vien + GV (chua co thong tin). Docker: khong ghi chay thanh cong.

@@ -1,0 +1,84 @@
+{
+  "model": "Tree",
+  "best_params": {
+    "clf__min_samples_split": 50,
+    "clf__min_samples_leaf": 100,
+    "clf__max_depth": 12,
+    "clf__criterion": "gini"
+  },
+  "calibration_method": "sigmoid",
+  "threshold_cost_benefit": 0.0225,
+  "threshold_f1_oof": 0.02277387692460431,
+  "trained_at_utc": "2026-11-14T07:33:10.268252+00:00",
+  "scikit_learn": "1.9.1",
+  "data_file": "bank-additional-full.csv",
+  "data_sha256_prefix": "233e260d5d1d506a",
+  "n_train": 32940,
+  "n_val": 0,
+  "n_test": 8236,
+  "train_window": "train80 (train60+val, refit sau khi chọn trên validation)",
+  "test_metrics_cb_threshold": {
+    "roc_auc": 0.6121,
+    "pr_auc": 0.3967,
+    "accuracy": 0.3083,
+    "precision": 0.3083,
+    "recall": 1.0,
+    "f1": 0.4713,
+    "tn": 0,
+    "fp": 5697,
+    "fn": 0,
+    "tp": 2539
+  },
+  "test_metrics_f1_threshold": {
+    "roc_auc": 0.6121,
+    "pr_auc": 0.3967,
+    "accuracy": 0.3083,
+    "precision": 0.3083,
+    "recall": 1.0,
+    "f1": 0.4713,
+    "tn": 0,
+    "fp": 5697,
+    "fn": 0,
+    "tp": 2539
+  },
+  "bootstrap_ci_95": {
+    "roc_auc": [
+      0.5985,
+      0.6256
+    ],
+    "pr_auc": [
+      0.3798,
+      0.4155
+    ],
+    "f1": [
+      0.4597,
+      0.4828
+    ]
+  },
+  "brier_test_raw": 0.2549,
+  "brier_test_calibrated": 0.2556,
+  "top20_capture_test": 0.2745,
+  "cost_benefit_optimum_test": {
+    "C=1.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 29800.0
+    },
+    "C=1.0,R=10.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 17166.4
+    },
+    "C=1.0,R=25.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 55099.5
+    },
+    "C=2.0,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 21636.1
+    },
+    "C=0.5,R=15.0": {
+      "best_called_pct": 100.0,
+      "profit_mean": 33980.1
+    }
+  },
+  "note": "Mô hình chọn trên validation rồi refit trên train+val; calibrate + ngưỡng chọn trên OOF của train80; test theo thời gian (20% cuối) chỉ đánh giá một lần."
+}
