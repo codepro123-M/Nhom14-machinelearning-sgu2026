@@ -53,9 +53,11 @@ docker build -t bank-marketing .
 docker run -p 8501:8501 bank-marketing   # mở http://localhost:8501
 ```
 
-Lưu ý: chưa có log chạy Docker thành công trên máy thật (môi trường kiểm
-chứng Linux chặn tạo network namespace); nhóm sẽ chạy trên Windows và lưu log
-trước khi nộp.
+Đã chạy thành công trên máy Windows (Acer Nitro 5) ngày 22/11/2026:
+`docker build` 11/11 bước thành công, `docker run` khởi động được Streamlit
+tại http://localhost:8501 (Uvicorn server started on 0.0.0:8501). Log xem
+`../HinhAnh_KiemThu/docker_windows_20261122.png` và
+`../NhatKyKiemChung/docker_log_windows_20261122.txt`.
 
 `Dockerfile` đóng gói demo Streamlit (image `python:3.12-slim`, cổng 8501):
 
@@ -64,12 +66,10 @@ docker build -t bank-marketing .
 docker run -p 8501:8501 bank-marketing
 ```
 
-Chưa có log chạy thành công: trong môi trường kiểm chứng (sandbox Linux,
-15/11/2026) Docker daemon không khởi động được (`failed to start daemon:
-... failed to register "bridge" driver: operation not permitted`), nên
-`docker build` / `docker run` chưa chạy được ở đó. Cần chạy lại hai lệnh
-trên trên máy Windows (Docker Desktop) và mở `http://localhost:8501` để
-kiểm chứng.
+Trước đó, trong môi trường kiểm chứng (sandbox Linux, 15/11/2026) Docker
+daemon không khởi động được (`failed to start daemon: ... failed to register
+"bridge" driver: operation not permitted`), nên `docker build` / `docker run`
+chưa chạy được ở đó.
 
 ## Cấu trúc
 
